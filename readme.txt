@@ -11,7 +11,7 @@ License URI:       http://www.gnu.org/licenses/gpl-2.0.html
 Automatically turns your standard WordPress navigation menus into responsive select / drop-down menus when the screen is below a certain width. 
 
 == Description ==
-The perfect solution to make your site responsive for mobile devices like phones and tablets. jQuery Responsive Select Menu lets you make your WordPress menus responsive by turning them into drop-down &lt;select&gt; elements below a width of your choosing.
+The perfect solution to make your site responsive for mobile devices like phones and tablets. jQuery Responsive Select Menu lets you make your WordPress menus responsive by turning them into drop-down `<select>` elements below a width of your choosing.
 
 = Features =
 * Fully customizable - choose width, custom menu text, which menus to affect, and more.
