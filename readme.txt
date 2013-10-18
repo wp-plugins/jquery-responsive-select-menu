@@ -20,6 +20,8 @@ The perfect solution to make your site responsive for mobile devices like phones
 
 **See the section on [Installation](http://wordpress.org/plugins/jquery-responsive-select-menu/installation/) for details on setting up your responsive mobile select menu.**
 
+Banner photo by [Susannah Kay](http://susannahkay.com).
+
 == Installation ==
 = Installation =
 1. Install and activate the plugin.
