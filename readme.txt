@@ -44,13 +44,13 @@ You could enter `.nav-primary` or even `.nav-primary .wrap` for the Menu Contain
 Note: you may need to use a tool like Chrome inspect or Firebug to determine the appropriate class / ID for your menus.
 
 **Maximum Menu Width**  
-The width at which you want your normal menu to switch the responsive, drop-down select menu.
+The width at which you want your normal menu to switch to the responsive, drop-down select menu.
 
 **Sub Item Spacer**  
 The character used to denote sub-items in your drop-down select menus.
 
 **First Term**  
-The text for the select menu's top-level "dummy" item. If left blank, the drop-down select's item will be pulled from the first item in your navigation menu.
+The text for the select menu's top-level "dummy" item. If left blank, the drop-down select's item will be the first item in your normal navigation menu.
 
 **Show Current Page**  
 If checked, your drop-down select menu will show the current page. If unchecked, the menu will display the top-level "dummy" item.
