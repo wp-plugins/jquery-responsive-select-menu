@@ -13,6 +13,8 @@ Automatically turns your standard WordPress navigation menus into responsive sel
 == Description ==
 The perfect solution to make your site responsive for mobile devices like phones and tablets. jQuery Responsive Select Menu lets you make your WordPress menus responsive by turning them into drop-down `<select>` elements below a width of your choosing.
 
+A [**MIGHTYminnow**](http://mightyminnow.com) plugin.
+
 = Features =
 * Fully customizable - choose width, custom menu text, which menus to affect, and more.
 * Works for ALL menus, whether custom WordPress 3 or automatically generated.
