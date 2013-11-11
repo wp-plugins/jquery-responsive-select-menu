@@ -7,7 +7,7 @@ jQuery(document).ready(function() {
     var menuContainers = php_params.containers.replace(/, /g,',').split(',');
 
     // Only proceed if some menuContainer is specified
-    if ( 1 >= menuContainers.length )
+    if ( '' == menuContainers )
         return false;
     
     // 1. Loop through menu containers
@@ -51,7 +51,7 @@ jQuery(document).ready(function() {
         if ( 1 == php_params.showCurrentPage )
             select.find('.current-page').attr('selected',true);
         else
-            firstOption.attr('selected',true);
+            select.find('option').first().attr('selected',true);
 
     }); // End 1. Main loop through menu containers
 
