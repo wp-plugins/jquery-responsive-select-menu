@@ -6,6 +6,10 @@ jQuery(document).ready(function() {
     // Menu containers array
     var menuContainers = php_params.containers.replace(/, /g,',').split(',');
 
+    // Only proceed if some menuContainer is specified
+    if ( 1 >= menuContainers.length )
+        return false;
+    
     // 1. Loop through menu containers
     jQuery.each(menuContainers, function( index, container ) {
 
