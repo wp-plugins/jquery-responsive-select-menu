@@ -3,8 +3,8 @@ Contributors:      McGuive7, MIGHTYminnow
 Donate link:       http://mightyminnow.com
 Tags:              responsive, mobile, navigation, menu, select, mobile, tablet, phone, iPhone, android, drop-down, jQuery
 Requires at least: 3.0
-Tested up to:      3.6.1
-Stable tag:        1.1
+Tested up to:      3.9.1
+Stable tag:        1.2
 License:           GPLv2 or later
 License URI:       http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -57,6 +57,9 @@ The text for the select menu's top-level "dummy" item. If left blank, the drop-d
 **Show Current Page**  
 If checked, your drop-down select menu will show the current page. If unchecked, the menu will display the top-level "dummy" item.
 
+**Omit Placeholder Items**  
+If checked, the generated drop-down menu won't include any menu items whose `href` attribute is empty or "#".
+
 == Screenshots ==
 1. Normal WordPress navigation.
 2. Responsive select / drop-down menu at user-specified mobile width.
@@ -64,10 +67,24 @@ If checked, your drop-down select menu will show the current page. If unchecked,
 
 == Changelog ==
 
+= 1.2 =
+* Added ability to omit empty "placeholder" menu items from the drop-down menu.
+* Add unique class to each generated menu (e.g. jrsm-1).
+
+= 1.1 =
+* Minor jQuery modification to prevent JS error when no container is selected.
+
 = 1.0 =
 * First release
 
 == Upgrade Notice ==
+
+= 1.2 =
+* Added ability to omit empty "placeholder" menu items from the drop-down menu.
+* Add unique class to each generated menu (e.g. jrsm-1).
+
+= 1.1 =
+* Minor jQuery modification to prevent JS error when no container is selected.
 
 = 1.0 =
 First Release
