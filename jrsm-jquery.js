@@ -6,6 +6,10 @@ jQuery(document).ready(function() {
     // Menu containers array
     var menuContainers = php_params.containers.replace(/, /g,',').split(',');
 
+    // Only proceed if some menuContainer is specified
+    if ( '' == menuContainers )
+        return false;
+    
     // 1. Loop through menu containers
     jQuery.each(menuContainers, function( index, container ) {
 
@@ -14,7 +18,7 @@ jQuery(document).ready(function() {
 
         // Add dropdown <select>
         jQuery('<select />', {
-            'class': 'jquery-responsive-select-menu',
+            'class': 'jquery-responsive-select-menu jrsm-' + index,
             'name': 'jrsm-' + index
         }).insertAfter(ul);
 
@@ -47,7 +51,7 @@ jQuery(document).ready(function() {
         if ( 1 == php_params.showCurrentPage )
             select.find('.current-page').attr('selected',true);
         else
-            firstOption.attr('selected',true);
+            select.find('option').first().attr('selected',true);
 
     }); // End 1. Main loop through menu containers
 
@@ -75,10 +79,12 @@ function get_child_menu_items( ul, depth ) {
         var text = li.children('a').text();
 
         // Ouput <option>
-        var option = jQuery('<option />', {
-            'value'   : value,
-            'text'    : prefix + ' ' + text
-        }).appendTo(select);
+        if ( ! php_params.hideEmptyLinks || ( php_params.hideEmptyLinks && value && "#" != value ) ) {
+            var option = jQuery('<option />', {
+                'value'   : value,
+                'text'    : prefix + ' ' + text
+            }).appendTo(select);
+        }
 
         // Add current class to current page item
         if ( li.hasClass('current_page_item') ) {

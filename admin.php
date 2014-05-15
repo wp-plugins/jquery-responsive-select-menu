@@ -122,6 +122,19 @@ function jrsm_register_settings() {
 		)
 	);
 
+	// Show current page
+	$fields[] = array (
+		'id' => 'jrsm-hide-empty-links',
+		'title' => __( 'Hide Empty Links', 'jrsm' ),
+		'callback' => 'jrsm_output_fields',
+		'section' => 'jquery-responsive-select-menu',
+		'page' => 'jrsm-settings-section',
+		'args' => array(
+			'type' => 'checkbox',
+			'after_text' => __( 'Omit "placeholder" menu items whose <code>href</code> attribute is blank or "#".', 'jrsm' ),
+		)
+	);
+
 	// Add settings fields
 	foreach( $fields as $field ) {
 		jrsm_register_settings_field( $field['id'], $field['title'], $field['callback'], $field['section'], $field['page'], $field );	
