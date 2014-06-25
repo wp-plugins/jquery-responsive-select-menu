@@ -67,6 +67,9 @@ If checked, the generated drop-down menu won't include any menu items whose `hre
 
 == Changelog ==
 
+= 1.3 =
+* Added Spanish translation (thanks to Andrew Kurtis).
+
 = 1.2 =
 * Added ability to omit empty "placeholder" menu items from the drop-down menu.
 * Add unique class to each generated menu (e.g. jrsm-1).
@@ -78,6 +81,9 @@ If checked, the generated drop-down menu won't include any menu items whose `hre
 * First release
 
 == Upgrade Notice ==
+
+= 1.3 =
+* Added Spanish translation (thanks to Andrew Kurtis).
 
 = 1.2 =
 * Added ability to omit empty "placeholder" menu items from the drop-down menu.
