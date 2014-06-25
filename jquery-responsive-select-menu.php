@@ -3,7 +3,7 @@
  * Plugin Name: jQuery Responsive Select Menu
  * Plugin URI:  http://mightyminnow.com
  * Description: The jQuery Responisve Select Menu plugin replaces the default WordPress navigation menu(s) with a dropdown &lt;select&gt; on mobile devices.
- * Version:     1.2
+ * Version:     1.3
  * Author:      MIGHTYminnow
  * Author URI:  http://mightyminnow.com
  * License:     GPLv2+
