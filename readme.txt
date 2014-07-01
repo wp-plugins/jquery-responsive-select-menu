@@ -20,6 +20,12 @@ The perfect solution to make your site responsive for mobile devices like phones
 
 **See the section on [Installation](http://wordpress.org/plugins/jquery-responsive-select-menu/installation/) for details on setting up your responsive mobile select menu.**
 
+= Translations/Languages =
+* English
+* Spanish (Andrew Kurtis, [WebHostingHub](http://www.webhostinghub.com/))
+
+Please file a [support request](http://wordpress.org/support/plugin/jquery-responsive-select-menu) if you are interested in translating this plugin into another language.
+
 Banner photo by [Susannah Kay](http://susannahkay.com).
 
 == Installation ==
