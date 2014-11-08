@@ -45,7 +45,7 @@ function jrsm_register_settings() {
 	// Setting sections
 	add_settings_section(
 		'jrsm-settings-section',
-		'Main Settings',
+		__( 'Main Settings', 'jquery-responsive-select-menu' ),
 		'',
 		'jquery-responsive-select-menu'
 	);
@@ -55,21 +55,21 @@ function jrsm_register_settings() {
 	// Menu Containers
 	$fields[] = array (
 		'id' => 'jrsm-containers',
-		'title' => __( 'Menu Container(s) Class / ID', 'jrsm' ),
+		'title' => __( 'Menu Container(s) Class / ID', 'jquery-responsive-select-menu' ),
 		'callback' => 'jrsm_output_fields',
 		'section' => 'jquery-responsive-select-menu',
 		'page' => 'jrsm-settings-section',
 		'args' => array( 
 			'type' => 'text',
 			'validation' => 'wp_kses_post',
-			'description' => __( 'Comma separated list of selectors for the parent div containing each menu &lt;ul&gt;.<br />Example: #nav, .mini-nav', 'jrsm' ),
+			'description' => __( 'Comma separated list of selectors for the parent div containing each menu &lt;ul&gt;.<br />Example: #nav, .mini-nav', 'jquery-responsive-select-menu' ),
 		)
 	);
 
 	// Maximum width
 	$fields[] = array (
 		'id' => 'jrsm-width',
-		'title' => __( 'Maximum Menu Width', 'jrsm' ),
+		'title' => __( 'Maximum Menu Width', 'jquery-responsive-select-menu' ),
 		'callback' => 'jrsm_output_fields',
 		'section' => 'jquery-responsive-select-menu',
 		'page' => 'jrsm-settings-section',
@@ -77,61 +77,61 @@ function jrsm_register_settings() {
 			'type' => 'text',
 			'validation' => 'intval',
 			'after_text' => 'px',
-			'description' => __( 'The width at which the responsive select menu should appear/disappear.', 'jrsm' ),
+			'description' => __( 'The width at which the responsive select menu should appear/disappear.', 'jquery-responsive-select-menu' ),
 		)
 	);
 
 	// Sub-item spacer
 	$fields[] = array (
 		'id' => 'jrsm-sub-item-spacer',
-		'title' => __( 'Sub Item Spacer', 'jrsm' ),
+		'title' => __( 'Sub Item Spacer', 'jquery-responsive-select-menu' ),
 		'callback' => 'jrsm_output_fields',
 		'section' => 'jquery-responsive-select-menu',
 		'page' => 'jrsm-settings-section',
 		'args' => array(
 			'type' => 'text',
 			'validation' => 'wp_kses_post',
-			'description' => __( 'The character(s) used to indent sub items.', 'jrsm' ),
+			'description' => __( 'The character(s) used to indent sub items.', 'jquery-responsive-select-menu' ),
 		)
 	);
 
 	// First term name
 	$fields[] = array (
 		'id' => 'jrsm-first-term',
-		'title' => __( 'First Term', 'jrsm' ),
+		'title' => __( 'First Term', 'jquery-responsive-select-menu' ),
 		'callback' => 'jrsm_output_fields',
 		'section' => 'jquery-responsive-select-menu',
 		'page' => 'jrsm-settings-section',
 		'args' => array(
 			'type' => 'text',
 			'validation' => 'wp_kses_post',
-			'description' => __( 'The text for the select menu\'s top-level "dummy" item.<br />Example: ⇒ Navigation', 'jrsm' ),
+			'description' => __( 'The text for the select menu\'s top-level "dummy" item.<br />Example: ⇒ Navigation', 'jquery-responsive-select-menu' ),
 		)
 	);
 
 	// Show current page
 	$fields[] = array (
 		'id' => 'jrsm-show-current-page',
-		'title' => __( 'Show Current Page', 'jrsm' ),
+		'title' => __( 'Show Current Page', 'jquery-responsive-select-menu' ),
 		'callback' => 'jrsm_output_fields',
 		'section' => 'jquery-responsive-select-menu',
 		'page' => 'jrsm-settings-section',
 		'args' => array(
 			'type' => 'checkbox',
-			'after_text' => __( 'Show the currently selected page instead of the top level "dummy" item.', 'jrsm' ),
+			'after_text' => __( 'Show the currently selected page instead of the top level "dummy" item.', 'jquery-responsive-select-menu' ),
 		)
 	);
 
 	// Show current page
 	$fields[] = array (
 		'id' => 'jrsm-hide-empty-links',
-		'title' => __( 'Hide Empty Links', 'jrsm' ),
+		'title' => __( 'Hide Empty Links', 'jquery-responsive-select-menu' ),
 		'callback' => 'jrsm_output_fields',
 		'section' => 'jquery-responsive-select-menu',
 		'page' => 'jrsm-settings-section',
 		'args' => array(
 			'type' => 'checkbox',
-			'after_text' => __( 'Omit "placeholder" menu items whose <code>href</code> attribute is blank or "#".', 'jrsm' ),
+			'after_text' => __( 'Omit "placeholder" menu items whose <code>href</code> attribute is blank or "#".', 'jquery-responsive-select-menu' ),
 		)
 	);
 

@@ -4,7 +4,7 @@ jQuery(document).ready(function() {
     jQuery('body').addClass('jquery');
 
     // Menu containers array
-    var menuContainers = php_params.containers.replace(/, /g,',').split(',');
+    var menuContainers = jrsm_params.containers.replace(/, /g,',').split(',');
 
     // Only proceed if some menuContainer is specified
     if ( '' == menuContainers )
@@ -22,7 +22,7 @@ jQuery(document).ready(function() {
             'name': 'jrsm-' + index
         }).insertAfter(ul);
 
-        if ( !php_params.firstItem )
+        if ( !jrsm_params.firstItem )
             var label = 'Navigation';
         
         // Add <label> for select
@@ -36,11 +36,11 @@ jQuery(document).ready(function() {
         select = jQuery(container).find('.jquery-responsive-select-menu');
 
         // Create first, default <option>
-        if ( php_params.firstItem ) {
+        if ( jrsm_params.firstItem ) {
             var firstOption = jQuery('<option />', {
                 'class': 'first-option',
                 'value'   : '',
-                'text'    : php_params.firstItem
+                'text'    : jrsm_params.firstItem
             }).appendTo(select);
         }
 
@@ -48,7 +48,7 @@ jQuery(document).ready(function() {
         get_child_menu_items( ul, 1 );
 
         // Choose <option> to be selected
-        if ( 1 == php_params.showCurrentPage )
+        if ( 1 == jrsm_params.showCurrentPage )
             select.find('.current-page').attr('selected',true);
         else
             select.find('option').first().attr('selected',true);
@@ -71,7 +71,7 @@ function get_child_menu_items( ul, depth ) {
         var li = jQuery(li);
 
         // Get depth prefix
-        var prefix = php_params.indent;
+        var prefix = jrsm_params.indent;
         prefix = Array(depth).join(prefix);
 
         // Get <li> value & text
@@ -79,7 +79,7 @@ function get_child_menu_items( ul, depth ) {
         var text = li.children('a').text();
 
         // Ouput <option>
-        if ( ! php_params.hideEmptyLinks || ( php_params.hideEmptyLinks && value && "#" != value ) ) {
+        if ( ! jrsm_params.hideEmptyLinks || ( jrsm_params.hideEmptyLinks && value && "#" != value ) ) {
             var option = jQuery('<option />', {
                 'value'   : value,
                 'text'    : prefix + ' ' + text

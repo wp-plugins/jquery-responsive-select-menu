@@ -3,10 +3,12 @@
  * Plugin Name: jQuery Responsive Select Menu
  * Plugin URI:  http://mightyminnow.com
  * Description: The jQuery Responisve Select Menu plugin replaces the default WordPress navigation menu(s) with a dropdown &lt;select&gt; on mobile devices.
- * Version:     1.3
+ * Version:     1.3.1
  * Author:      MIGHTYminnow
  * Author URI:  http://mightyminnow.com
  * License:     GPLv2+
+ * Text Domain: jquery-responsive-select-menu
+ * Domain Path: /languages
  */
 
 // Definitions
@@ -22,11 +24,9 @@ require_once dirname( __FILE__ ) . '/admin.php';
  * @since   1.0
  */
 function jrsm_init() {
-
-    // Load plugin text domain
-    load_plugin_textdomain( 'jrsm', false, dirname( plugin_basename( __FILE__ ) ) . '/languages/' );
+    load_plugin_textdomain( 'jquery-responsive-select-menu', false, dirname( plugin_basename( __FILE__ ) ) . '/languages/' );
 }
-add_action( 'plugins_init', 'jrsm_init' );
+add_action( 'plugins_loaded', 'jrsm_init' );
 
 /**
  * Enqueues required scripts & styles, and passes PHP variables to jQuery file
@@ -36,11 +36,8 @@ add_action( 'plugins_init', 'jrsm_init' );
  */
 function jrsm_scripts() {
 
-	// Make sure jQuery is included
-	wp_enqueue_script('jquery');
-    
 	// Include JRSM jQuery
-    wp_enqueue_script( 'jrsm-jquery', plugins_url( '/jrsm-jquery.js', __FILE__ ), array( 'jquery' ), '1.0', false );
+    wp_enqueue_script( 'jrsm-jquery', plugins_url( '/jrsm-jquery.js', __FILE__ ), array( 'jquery' ), null, true );
 
     // Add PHP plugin variables to the $params[] array to pass to jQuery
 	$params = array (
@@ -53,14 +50,14 @@ function jrsm_scripts() {
 	);
 
 	// Pass PHP variables to jQuery script
-	wp_localize_script( 'jrsm-jquery', 'php_params', $params );
+	wp_localize_script( 'jrsm-jquery', 'jrsm_params', $params );
 
 	// Load custom CSS file
 	wp_enqueue_style( 'jrsm-css', plugin_dir_url( __FILE__ ) . 'jrsm.css' );
 
 	// Append custom CSS based on plugin settings
 	$containers = str_replace(', ', ',', get_option( 'jrsm-containers' ) );
-    if ( !empty( $containers ) ) {
+    if ( ! empty( $containers ) ) {
         // Get menu <ul>'s inside container(s)
         $containers = explode( ',', $containers );
         foreach( $containers as &$container ) {
