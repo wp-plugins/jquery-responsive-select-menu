@@ -75,6 +75,7 @@ If checked, the generated drop-down menu won't include any menu items whose `hre
 == Changelog ==
 
 = 1.4 =
+* Added fix for bug in which current page was not indicated (now targets both current_page_item and current-menu-item).
 * Fixed flash of unstyled content issue - now adding html “jquery” class immediately.
 * Added admin option to “disable” placeholder (href=“#”) menu links.
 * Fixed typo in description.
@@ -102,6 +103,7 @@ If checked, the generated drop-down menu won't include any menu items whose `hre
 == Upgrade Notice ==
 
 = 1.4 =
+* Added fix for bug in which current page was not indicated (now targets both current_page_item and current-menu-item).
 * Fixed flash of unstyled content issue - now adding html “jquery” class immediately.
 * Added admin option to “disable” placeholder (href=“#”) menu links.
 * Fixed typo in description.
