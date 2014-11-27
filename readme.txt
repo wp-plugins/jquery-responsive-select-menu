@@ -4,7 +4,7 @@ Donate link:       http://mightyminnow.com
 Tags:              responsive, mobile, navigation, menu, select, mobile, tablet, phone, iPhone, android, drop-down, jQuery
 Requires at least: 3.0
 Tested up to:      4.1
-Stable tag:        1.3.1
+Stable tag:        1.4
 License:           GPLv2 or later
 License URI:       http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -74,9 +74,17 @@ If checked, the generated drop-down menu won't include any menu items whose `hre
 
 == Changelog ==
 
+= 1.4 =
+* Fixed flash of unstyled content issue - now adding html “jquery” class immediately.
+* Added admin option to “disable” placeholder (href=“#”) menu links.
+* Fixed typo in description.
+* Switched from attr() to prop() for better jQuery semantics.
+
 = 1.3.1 =
-* Added German translation (thanks to Ov3rfly)
+* Added German translation (thanks to Ov3rfly).
 * Fixed bug in which translations weren’t being applied.
+* Properly prefixed jQuery variable passed from PHP.
+* Switched from plugins_init to plugins_loaded hook.
 
 = 1.3 =
 * Added Spanish translation (thanks to Andrew Kurtis).
@@ -93,9 +101,17 @@ If checked, the generated drop-down menu won't include any menu items whose `hre
 
 == Upgrade Notice ==
 
+= 1.4 =
+* Fixed flash of unstyled content issue - now adding html “jquery” class immediately.
+* Added admin option to “disable” placeholder (href=“#”) menu links.
+* Fixed typo in description.
+* Switched from attr() to prop() for better jQuery semantics.
+
 = 1.3.1 =
-* Added German translation (thanks to Ov3rfly)
+* Added German translation (thanks to Ov3rfly).
 * Fixed bug in which translations weren’t being applied.
+* Properly prefixed jQuery variable passed from PHP.
+* Switched from plugins_init to plugins_loaded hook.
 
 = 1.3 =
 * Added Spanish translation (thanks to Andrew Kurtis).

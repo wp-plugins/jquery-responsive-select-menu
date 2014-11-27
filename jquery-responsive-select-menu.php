@@ -2,8 +2,8 @@
 /**
  * Plugin Name: jQuery Responsive Select Menu
  * Plugin URI:  http://mightyminnow.com
- * Description: The jQuery Responisve Select Menu plugin replaces the default WordPress navigation menu(s) with a dropdown &lt;select&gt; on mobile devices.
- * Version:     1.3.1
+ * Description: The jQuery Responsive Select Menu plugin replaces the default WordPress navigation menu(s) with a dropdown &lt;select&gt; on mobile devices.
+ * Version:     1.4
  * Author:      MIGHTYminnow
  * Author URI:  http://mightyminnow.com
  * License:     GPLv2+
@@ -37,7 +37,7 @@ add_action( 'plugins_loaded', 'jrsm_init' );
 function jrsm_scripts() {
 
 	// Include JRSM jQuery
-    wp_enqueue_script( 'jrsm-jquery', plugins_url( '/jrsm-jquery.js', __FILE__ ), array( 'jquery' ), null, true );
+    wp_enqueue_script( 'jrsm-jquery', plugins_url( '/jrsm-jquery.js', __FILE__ ), array( 'jquery' ) );
 
     // Add PHP plugin variables to the $params[] array to pass to jQuery
 	$params = array (
@@ -46,7 +46,8 @@ function jrsm_scripts() {
 		'firstItem' => get_option( 'jrsm-first-term' ),
 		'indent' => get_option( 'jrsm-sub-item-spacer' ),
 		'showCurrentPage' => get_option( 'jrsm-show-current-page' ),
-		'hideEmptyLinks' => get_option( 'jrsm-hide-empty-links' )
+		'hideEmptyLinks' => get_option( 'jrsm-hide-empty-links' ),
+		'disableEmptyLinks' => get_option( 'jrsm-disable-empty-links' ),
 	);
 
 	// Pass PHP variables to jQuery script

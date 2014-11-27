@@ -122,7 +122,7 @@ function jrsm_register_settings() {
 		)
 	);
 
-	// Show current page
+	// Hide empty links
 	$fields[] = array (
 		'id' => 'jrsm-hide-empty-links',
 		'title' => __( 'Hide Empty Links', 'jquery-responsive-select-menu' ),
@@ -131,7 +131,20 @@ function jrsm_register_settings() {
 		'page' => 'jrsm-settings-section',
 		'args' => array(
 			'type' => 'checkbox',
-			'after_text' => __( 'Omit "placeholder" menu items whose <code>href</code> attribute is blank or "#".', 'jquery-responsive-select-menu' ),
+			'after_text' => __( 'Remove "placeholder" menu items whose <code>href</code> attribute is blank or "#".', 'jquery-responsive-select-menu' ),
+		)
+	);
+
+	// Disable empty links
+	$fields[] = array (
+		'id' => 'jrsm-disable-empty-links',
+		'title' => __( 'Disable Empty Links', 'jquery-responsive-select-menu' ),
+		'callback' => 'jrsm_output_fields',
+		'section' => 'jquery-responsive-select-menu',
+		'page' => 'jrsm-settings-section',
+		'args' => array(
+			'type' => 'checkbox',
+			'after_text' => __( 'Add the <code>disabled</code> property to "placeholder" menu items whose <code>href</code> attribute is blank or "#" (will be visible, but not clickable).', 'jquery-responsive-select-menu' ),
 		)
 	);
 

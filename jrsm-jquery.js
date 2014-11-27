@@ -1,7 +1,10 @@
+// Add jquery class to body for jQuery dependent CSS
+(function() {
+    jQuery('html').addClass('jquery');
+})();
+
+// Main functionality
 jQuery(document).ready(function() {
-    
-    // Add jquery class to body for jquery dependent CSS
-    jQuery('body').addClass('jquery');
 
     // Menu containers array
     var menuContainers = jrsm_params.containers.replace(/, /g,',').split(',');
@@ -49,9 +52,9 @@ jQuery(document).ready(function() {
 
         // Choose <option> to be selected
         if ( 1 == jrsm_params.showCurrentPage )
-            select.find('.current-page').attr('selected',true);
+            select.find('.current-page').prop('selected',true);
         else
-            select.find('option').first().attr('selected',true);
+            select.find('option').first().prop('selected',true);
 
     }); // End 1. Main loop through menu containers
 
@@ -82,12 +85,17 @@ function get_child_menu_items( ul, depth ) {
         if ( ! jrsm_params.hideEmptyLinks || ( jrsm_params.hideEmptyLinks && value && "#" != value ) ) {
             var option = jQuery('<option />', {
                 'value'   : value,
-                'text'    : prefix + ' ' + text
+                'text'    : prefix + ' ' + text,
             }).appendTo(select);
+
+            // Add "disabled" property if needed
+            if ( jrsm_params.disableEmptyLinks && "#" == value ) {
+                option.prop('disabled', true);
+            }
         }
 
         // Add current class to current page item
-        if ( li.hasClass('current_page_item') ) {
+        if ( li.hasClass('current_page_item') || li.hasClass('current-menu-item') ) {
             option.addClass('current-page');
         }
 
