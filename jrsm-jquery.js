@@ -85,7 +85,7 @@ function get_child_menu_items( ul, depth ) {
         if ( ! jrsm_params.hideEmptyLinks || ( jrsm_params.hideEmptyLinks && value && "#" != value ) ) {
             var option = jQuery('<option />', {
                 'value'   : value,
-                'text'    : prefix + ' ' + text,
+                'text'    : prefix + ' ' + text
             }).appendTo(select);
 
             // Add "disabled" property if needed
