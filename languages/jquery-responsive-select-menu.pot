@@ -1,9 +1,9 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: jQuery Responsive Select Menu\n"
-"POT-Creation-Date: 2014-11-07 23:21-0800\n"
-"PO-Revision-Date: 2014-11-07 23:21-0800\n"
-"Last-Translator: \n"
+"POT-Creation-Date: 2014-11-30 11:42-0800\n"
+"PO-Revision-Date: 2014-11-30 11:42-0800\n"
+"Last-Translator: Mickey Kay <mickeyskay@gmail.com>\n"
 "Language-Team: \n"
 "Language: en\n"
 "MIME-Version: 1.0\n"
@@ -71,6 +71,17 @@ msgstr ""
 
 #: ../admin.php:134
 msgid ""
-"Omit \"placeholder\" menu items whose <code>href</code> attribute is blank "
+"Remove \"placeholder\" menu items whose <code>href</code> attribute is blank "
 "or \"#\"."
+msgstr ""
+
+#: ../admin.php:141
+msgid "Disable Empty Links"
+msgstr ""
+
+#: ../admin.php:147
+msgid ""
+"Add the <code>disabled</code> property to \"placeholder\" menu items whose "
+"<code>href</code> attribute is blank or \"#\" (will be visible, but not "
+"clickable)."
 msgstr ""

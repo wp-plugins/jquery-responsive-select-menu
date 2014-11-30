@@ -4,7 +4,7 @@ Donate link:       http://mightyminnow.com
 Tags:              responsive, mobile, navigation, menu, select, mobile, tablet, phone, iPhone, android, drop-down, jQuery
 Requires at least: 3.0
 Tested up to:      4.1
-Stable tag:        1.4
+Stable tag:        1.4.1
 License:           GPLv2 or later
 License URI:       http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -74,6 +74,10 @@ If checked, the generated drop-down menu won't include any menu items whose `hre
 
 == Changelog ==
 
+= 1.4.1 =
+* Fixed jQuery bug with extra comma that affected older browsers.
+* Updated translations.
+
 = 1.4 =
 * Added fix for bug in which current page was not indicated (now targets both current_page_item and current-menu-item).
 * Fixed flash of unstyled content issue - now adding html “jquery” class immediately.
@@ -101,6 +105,10 @@ If checked, the generated drop-down menu won't include any menu items whose `hre
 * First release
 
 == Upgrade Notice ==
+
+= 1.4.1 =
+* Fixed jQuery bug with extra comma that affected older browsers.
+* Updated translations.
 
 = 1.4 =
 * Added fix for bug in which current page was not indicated (now targets both current_page_item and current-menu-item).
