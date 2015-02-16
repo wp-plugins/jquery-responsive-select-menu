@@ -60,7 +60,12 @@ jQuery(document).ready(function() {
 
     // Select functionality
     jQuery('.jquery-responsive-select-menu').change(function() {
-        window.location = jQuery(this).find('option:selected').val();
+        var option = jQuery(this).find('option:selected').is('[value]');
+
+        // Check if option has actual value
+        if ( jQuery(this).find('option:selected').is('[value]') && "#" != jQuery(this).find('option:selected').val() ) {
+            window.location = jQuery(this).find('option:selected').val();
+        }
     });
 
 });
@@ -89,7 +94,7 @@ function get_child_menu_items( ul, depth ) {
             }).appendTo(select);
 
             // Add "disabled" property if needed
-            if ( jrsm_params.disableEmptyLinks && "#" == value ) {
+            if ( jrsm_params.disableEmptyLinks && ( ! value || "#" == value ) ) {
                 option.prop('disabled', true);
             }
         }
